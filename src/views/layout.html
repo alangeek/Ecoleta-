@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Metadados -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <!-- Metadados -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% block title %}
-        <!-- title -->
-        <title>Ecoolet</title>
-    {% endblock title %}
-    
-    
+        {% block title %}
+            <!-- title -->
+            <title>Ecoolet</title>
+        {% endblock title %}
 
-    <!-- links externos -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+        <!-- links externos -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 
-    {% block styles %}
-    {% endblock styles %}
-    
-    <!-- links css -->
-    <link rel="stylesheet" href="/styles/main.css">
+        {% block styles %}{% endblock styles %}
 
+        <!-- links css -->
+        <link rel="stylesheet" href="/styles/main.css">
 
-    <link rel="stylesheet" href="/styles/responsive.css">
-</head>
-<body>
+        <link rel="stylesheet" href="/styles/responsive.css">
+    </head>
+    <body>
 
-    <div id="{{ bodyId }}">
-        {% block content %}
-        {% endblock content %}
-    </div> <!-- page-home--->
-     
-    {% block modal %}
-    {% endblock modal %}
+        <div id="{{ pageId }}">
+            {% block content %}{% endblock content %}
+        </div>
+        <!-- page-home--->
 
-    {% block scriptps %}
-    {% endblock scriptps %}
+        {% block modal %}{% endblock modal %}
 
-</body>
+        {% block scriptps %}{% endblock scriptps %}
+
+    </body>
 </html>
