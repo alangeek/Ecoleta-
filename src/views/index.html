@@ -1,37 +1,43 @@
 {% extends "layout.html" %}
 
+{% set bodyId = "page-home" %}
 
-
-
-    <title>Ecoolet</title>
 
 {% block styles %}
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/modal.css">
 {% endblock styles %}
 
-    {# id="page-home"> #}
-        
-        <div class="content">
-            <header>
-                <img src="/assets/logo.svg" alt="Ecoolet">
-                <a href="/create-point">
-                    <span></span>
-                    Cadastre um ponto de coleta
-                </a>
-            </header>
-    
-            <main>
-                <h1>{{ title }}</h1>
-            
-                <p> Ajudamos pessoas a encontrarem de coleta de forma eficiente</p>
-        
-                <a href="#"><span></span><strong>Pesqusisar pontos de coleta</strong></a>
-            </main>
-        </div> <!-- content -->
+{% block content %}
+<div class="content">
+    <header>
+        <img src="/assets/logo.svg" alt="Ecoolet">
+        <a href="/create-point">
+            <span></span>
+            Cadastre um ponto de coleta
+        </a>
+    </header>
 
+    <main>
+        <h1>{{ title }}</h1>
     
+        <p> Ajudamos pessoas a encontrarem de coleta de forma eficiente</p>
+
+        <a href="#"><span></span><strong>Pesqusisar pontos de coleta</strong></a>
+    </main>
+</div> <!-- content -->
+{% endblock content %}
+        
+       
+{% block modal %}
+
     {% include "partials/modal.html" %}
+
+{% endblock modal %}
     
+{% block scriptps %}
     <script src="/scripts/index.js"></script>
+{% endblock scriptps %}    
+    
+    
      
